@@ -3,8 +3,17 @@ package com.nelioalves.cursomc.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity // Transforma a classe em um entidade no banco de dados h2
+
 public class Categoria implements Serializable {
 
+	@Id // chave primaria
+	@GeneratedValue(strategy = GenerationType.IDENTITY)  // estrategia para criar automaticamente o id 
 	private Integer id;
 	private String nome;
 

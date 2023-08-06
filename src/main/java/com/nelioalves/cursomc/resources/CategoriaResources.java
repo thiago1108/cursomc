@@ -14,18 +14,18 @@ import com.nelioalves.cursomc.domain.Categoria;
 
 public class CategoriaResources {
 	
-	@RequestMapping (method = RequestMethod.GET)
+	@RequestMapping (method = RequestMethod.GET) // mapea para requisicoes get de categoria 
 	
 	public List<Categoria> Listar() {
 		
-		Categoria cat1 = new Categoria (1,"informatica");
+		Categoria cat1 = new Categoria (1,"informatica"); // instancia objeto cat1
 		Categoria cat2 = new Categoria (2,"Escritorio");	
 		
-		List<Categoria> lista = new ArrayList<>();
+		List<Categoria> lista = new ArrayList<>(); // cria lista tipo cateria e o arraylist
 		
 		lista.add(cat1);
 		lista.add(cat2);
 		
-		return lista;
+		return lista; // retorna lista 
 	}
 }
